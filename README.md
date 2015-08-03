@@ -1,4 +1,6 @@
 # simplenote.vim
+
+[![Join the chat at https://gitter.im/kidpixo/simplenote.vim](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kidpixo/simplenote.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A vim plugin to interact with the [simplenote][1] API. You can create an account
 [here][2] if you don't already have one.
 
