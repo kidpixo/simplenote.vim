@@ -60,7 +60,7 @@ In order to retrieve a list of your notes execute one of the following:
 
 The first option returns all notes, the second returns only those notes modified
 since YYYY-MM-DD, the third option shows passing a comma separated list of tags;
-this will only list notes which have at least one of those tags.  This opens a
+this will only list notes which have all of those tags.  This opens a
 new scratch buffer with a line-wise listing of your notes. With `let
 g:SimplenoteListHeight=X` set, the scratch buffer will come up X lines tall.
 Alternatively when `let g:SimplenoteVertical=1` is set, it is opened as a
