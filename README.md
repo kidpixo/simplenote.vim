@@ -39,7 +39,7 @@ But it's easier to use a plugin manager:
     Add Plug 'mrtazz/simplenote.vim' to .vimrc
     Run :PlugInstall
 
-Your credentials have to be stored in your `vimrc`:
+Your credentials can be stored in your `vimrc`:
 
     let g:SimplenoteUsername = "your simplenote username"
     let g:SimplenotePassword = "your simplenote password"
@@ -47,6 +47,9 @@ Your credentials have to be stored in your `vimrc`:
 If you don't want to have the credentials in your `vimrc` (if you manage it with
 git for example), you can just set the variables in a different file (like
 `~/.simplenoterc`) and source it with `source ~/.simplenoterc` in your `vimrc`.
+
+Alternatively, if you don't set these global variables then Simplenote.vim will
+prompt you for a username and password when you start using it.
 
 By default all notes are treated as plain text. If you usually write all of your
 notes in some other format (like markdown or restructured text) you can set
@@ -185,6 +188,16 @@ to add these lines (with the correct values) to your `.vimrc`:
     'http://<proxyuser>:<proxypassword>@<proxyurl>:<proxyport>' let $HTTPS_PROXY
     = 'http://<proxyuser>:<proxypassword>@<proxyurl>:<proxyport>'
 
+
+## Special issue concerning GFW
+For Chinese mainland users, since the authentication service of [simplenote][1] is hosted
+on [appspot](http://appspot.com), a VPN connection has to be configured to use
+simplenote.vim. The configurations of a VPN connection is surely beyond the scope of
+this doc. But if you have done that, you can add a shell alias or script
+exploiting `proxychains` to ease the invoking of simplenote.vim
+
+    # as for zsh
+    alias simplenote="proxychains -q vim -c 'Simplenote -l'"
 
 ## Development
 - [Bugs and issue tracker](https://github.com/mrtazz/simplenote.vim/issues)
